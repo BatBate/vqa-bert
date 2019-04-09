@@ -37,7 +37,6 @@ class image_embedding(nn.Module):
         # N x K x n_att
         attention = self.image_attention_model(
             image_feat_variable, question_embedding, image_dims)
-        print("image_embedding: ", attention.size())
         att_reshape = attention.permute(0, 2, 1)
         tmp_embedding = torch.bmm(
             att_reshape, image_feat_variable)  # N x n_att x image_dim
