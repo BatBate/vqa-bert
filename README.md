@@ -15,5 +15,6 @@ pip install torch==0.4.1
 
 pip install torchvision
 pip install tensorboardX
+pip install pytorch-pretrained-bert
 
 ```
